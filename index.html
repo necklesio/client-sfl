@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheds For Less | Premium Resin Storage Sheds – South Eastern Ontario</title>
-  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8x8, 8x12, 8x16 — No HST, snow-rated, local stock in Belleville. Contact dbbshed.seo@gmail.com." />
+  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8x8, 8x12, 8x16 — No HST, snow-rated, local stock in Belleville. Contact shedsforless@gmail.com." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://shedsforless.ca/" />
   <meta property="og:type" content="website" />
@@ -59,7 +59,7 @@
     [x-cloak] { display: none !important; }
   </style>
 </head>
-<body class="bg-white text-charcoal-900 font-sans antialiased" x-data="{ mobileMenu: false }">
+<body class="bg-white text-charcoal-900 font-sans antialiased" x-data="{ mobileMenu: false, lightbox: null }">
 
   <!-- Sticky Nav -->
   <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-charcoal-200">
@@ -206,27 +206,34 @@
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">See Them Installed</h2>
       <div class="w-12 h-1 bg-forest-700 mb-8 sm:mb-10"></div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        <button @click="lightbox = './images/resin-shed-interior-floor-walls-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-interior-floor-walls-south-ontario.jpg" alt="Resin shed interior showing floor and walls in South Eastern Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        </button>
+        <button @click="lightbox = './images/resin-shed-8x8-installed-backyard-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-8x8-installed-backyard-belleville.jpg" alt="8x8 resin shed installed in Belleville backyard with trees" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        </button>
+        <button @click="lightbox = './images/resin-shed-front-view-residential-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-front-view-residential-belleville-ontario.jpg" alt="Resin shed front view in residential Belleville Ontario neighbourhood" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        </button>
+        <button @click="lightbox = './images/resin-shed-interior-steel-frame-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-interior-steel-frame-belleville.jpg" alt="Resin shed interior steel-reinforced frame and roof in Belleville" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        </button>
+        <button @click="lightbox = './images/resin-shed-interior-floor-doorway-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-interior-floor-doorway-south-ontario.jpg" alt="Resin shed interior floor view from doorway in South Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+        </button>
+        <button @click="lightbox = './images/resin-shed-side-angle-installed-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
           <img src="./images/resin-shed-side-angle-installed-belleville-ontario.jpg" alt="Resin shed side angle view installed next to house in Belleville Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-        </div>
-      </div>
-    </div>
+        xxx
   </section>
+
+
+      <!-- Lightbox Modal -->
+      <div x-show="lightbox" x-cloak x-transition.opacity @click="lightbox = null" @keydown.escape.window="lightbox = null" class="fixed inset-0 z-[100] bg-charcoal-950/90 flex items-center justify-center p-4 sm:p-8 cursor-zoom-out">
+        <button @click="lightbox = null" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <img :src="lightbox" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain" @click.stop />
+      </div>
 
   <!-- Contact / Quote CTA -->
   <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-forest-900 text-white">
@@ -236,9 +243,9 @@
       <p class="text-sm sm:text-base text-forest-200 max-w-lg mx-auto mb-6 sm:mb-8 leading-relaxed">
         Email us directly for pricing, delivery quotes, or distributor inquiries. We serve Belleville, Trenton, Kingston, and all of South Eastern Ontario.
       </p>
-      <a href="mailto:dbbshed.seo@gmail.com" class="inline-flex items-center justify-center gap-2 bg-white text-forest-900 px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-50 transition-colors min-h-[48px]">
+      <a href="mailto:shedsforless@gmail.com" class="inline-flex items-center justify-center gap-2 bg-white text-forest-900 px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-50 transition-colors min-h-[48px]">
         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        dbbshed.seo@gmail.com
+        shedsforless@gmail.com
       </a>
     </div>
   </section>
@@ -249,7 +256,7 @@
       <p class="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-2">
         Sheds For <span class="text-forest-500">Less</span>
       </p>
-      <p class="text-xs">&copy; 2025 Sheds For Less. South Eastern Ontario, Canada.</p>
+      <p class="text-xs">&copy; 2026 Sheds For Less. South Eastern Ontario, Canada.</p>
     </div>
   </footer>
 
