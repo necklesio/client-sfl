@@ -4,134 +4,274 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheds For Less | Premium Resin Storage Sheds â€“ South Eastern Ontario</title>
-  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8Ã—8, 8Ã—12, 8Ã—16 â€” No HST, snow-rated, local stock in Belleville. Contact dbbshed.seo@gmail.com." />
+  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8x8, 8x12, 8x16 â€” No HST, snow-rated, local stock in Belleville. Contact dbbshed.seo@gmail.com." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://shedsforless.ca/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sheds For Less | Premium Resin Storage Sheds" />
+  <meta property="og:description" content="Premium resin storage sheds in South Eastern Ontario. No HST. Local stock in Belleville." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Lato:wght@300;400;700" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#f0faf4',
+              100: '#d9f2e4',
+              200: '#b5e5cb',
+              300: '#82d1a8',
+              400: '#4fb882',
+              500: '#2d9d64',
+              600: '#1f7f4f',
+              700: '#1a6641',
+              800: '#185136',
+              900: '#15432e',
+              950: '#0a2519',
+            },
+            charcoal: {
+              50: '#f6f6f6',
+              100: '#e7e7e7',
+              200: '#d1d1d1',
+              300: '#b0b0b0',
+              400: '#888888',
+              500: '#6d6d6d',
+              600: '#5d5d5d',
+              700: '#4f4f4f',
+              800: '#3d3d3d',
+              900: '#2a2a2a',
+              950: '#1a1a1a',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
   <style>
-:root{--black:#0a0a0b;--dark:#111114;--panel:#18181c;--card:#1f1f26;--border:#2a2a35;--silver:#b8bec9;--stardust:#ccd1dc;--white:#edf0f5;--accent:#c8ab6e;--green:#5de096;--font-display:'Barlow Condensed',sans-serif;--font-body:'Lato',sans-serif;--r-sm:6px;--r-md:12px;--r-lg:20px}
-*,~::before,~::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{max-width:1180px;margin:0 auto;padding:0 24px}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,11,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}
-.nav-inner{max-width:1180px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--font-display);font-size:26px;font-weight:900;letter-spacing:-1px;text-transform:uppercase}
-.nav-logo span{color:var(--accent)}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--black);padding:16px 32px;border-radius:var(--r-sm);font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:background .2s;border:none;cursor:pointer}
-#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:64px}
-.hero-photo-bg{position:absolute;inset:0;background-image:url('./images/8446656090803956552.jpg');background-size:cover;background-position:center 40%;filter:brightness(.32)}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,11,.88) 0%,rgba(10,10,11,.4) 60%,rgba(10,10,11,.7) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:60px 24px;width:100%}
-h1{font-family:var(--font-display);font-size:clamp(48px,7vw,88px);font-weight:900;line-height:.95;text-transform:uppercase;letter-spacing:-2px;margin-bottom:24px}
-hst-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(93,224,150,.12);border:1px solid rgba(93,224,150,.3);color:var(--green);padding:8px 16px;border-radius:40px;font-size:13px;font-weight:700;margin-bottom:32px}
-#products{padding:100px 0}
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.product-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
-.product-visual{height:220px;overflow:hidden}
-.product-visual img{width:100%;height:100%;object-fit:cover}
-.hst-tag{display:inline-block;background:rgba(93,224,150,.1);border:1px solid rgba(93,224,150,.25);color:var(--green);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:16px}
-.product-body{padding:24px}
-.product-name{font-family:var(--font-display);font-size:32px;font-weight:900;text-transform:uppercase;letter-spacing:-1px;margin-bottom:4px}
-.product-price{font-family:var(--font-display);font-size:38px;font-weight:800;color:var(--accent)}
-footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 0;text-align:center}
+    html { scroll-behavior: smooth; }
+    [x-cloak] { display: none !important; }
   </style>
 </head>
-<body>
-<nav>
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Sheds For <span>Less</span></a>
-  </div>
-</nav>
-<section id="hero">
-  <div class="hero-photo-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:20px">South Eastern Ontario Â· Belleville</div>
-    <h1>Built For<br>Canadian<br><span style="color:transparent;-webkit-text-stroke:2px var(--stardust)">Winters.</span></h1>
-    <p style="font-size:16px;color:var(--silver);max-width:440px;margin-bottom:14px;line-height:1.7">Premium resin storage sheds engineered for Ontario's climate. Steel-reinforced frames, 90 kg/mÂ² snow-rated, local stock in Belleville.</p>
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(93,224,150,.12);border:1px solid rgba(93,224,150,.3);color:var(--green);padding:8px 16px;border-radius:40px;font-size:13px;font-weight:700;margin-bottom:32px">âœ… NO HST â€” What you see is what you pay</div>
-    <div style="display:flex;gap:16px;flex-wrap:wrap">
-      <a href="#products" class="btn-primary">View Sheds â†“</a>
-      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);padding:16px 32px;border-radius:var(--r-sm);font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(255,255,255,.3)">Get a Quote</a>
+<body class="bg-white text-charcoal-900 font-sans antialiased" x-data="{ mobileMenu: false }">
+
+  <!-- Sticky Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-charcoal-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-xl sm:text-2xl font-black tracking-tight uppercase">
+        Sheds For <span class="text-forest-700">Less</span>
+      </a>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-charcoal-600">
+        <a href="#products" class="hover:text-forest-700 transition-colors">Products</a>
+        <a href="#gallery" class="hover:text-forest-700 transition-colors">Gallery</a>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-forest-700 text-white px-5 py-2.5 rounded-lg hover:bg-forest-800 transition-colors">Get a Quote</a>
+      </div>
+      <!-- Mobile Hamburger -->
+      <button @click="mobileMenu = !mobileMenu" class="md:hidden p-2 -mr-2 text-charcoal-700" aria-label="Toggle menu">
+        <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg x-show="mobileMenu" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
     </div>
-  </div>
-</section>
-<section id="products">
-  <div class="container" style="padding:100px 24px">
-    <p style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Available Now Â· No HST</p>
-    <h2 style="font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.05;text-transform:uppercase;letter-spacing:-1px">Choose Your Size</h2>
-    <div style="width:60px;height:3px;background:var(--accent);margin:20px 0 32px"></div>
-    <div class="products-grid">
-      <article class="product-card">
-        <div class="product-visual"><img src="./images/iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed__1_.webp" alt="8x8 shed" loading="lazy" /></div>
-        <div class="product-body">
-          <div class="product-name">8 Ã— 8 Shed</div>
-          <div style="font-size:13px;color:var(--silver);margin-bottom:14px">64 sq.ft Â· Tools &amp; garden equipment</div>
-          <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px"><span class="product-price">$1,499</span><span style="font-size:13px;color:var(--silver)">CAD</span></div>
-          <div class="hst-tag">â˜… No HST</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--border)"><span style="font-size:12px;color:var(--silver)">Stock: <strong style="color:var(--green)">10 units</strong></span><a href="#contact" style="background:transparent;border:1px solid var(--accent);color:var(--accent);padding:10px 20px;border-radius:6px;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none">Request Quote</a></div>
-        </div>
-      </article>
-      <article class="product-card" style="border-color:var(--accent);box-shadow:0 0 0 1px rgba(200,171,110,.3)">
-        <div style="position:absolute;top:16px;right:16px;background:var(--accent);color:var(--black);font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:20px;z-index:2">Best Value</div>
-        <div class="product-visual"><img src="./images/1990715268089103201.jpg" alt="8x12 shed" loading="lazy" /></div>
-        <div class="product-body">
-          <div class="product-name">8 Ã— 12 Shed</div>
-          <div style="font-size:13px;color:var(--silver);margin-bottom:14px">96 sq.ft Â· Most popular Â· Lawnmowers &amp; bikes</div>
-          <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px"><span class="product-price">$2,199</span><span style="font-size:13px;color:var(--silver)">CAD</span></div>
-          <div class="hst-tag">â˜… No HST</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--border)"><span style="font-size:12px;color:var(--silver)">Stock: <strong style="color:var(--green)">44 units</strong></span><a href="#contact" style="background:transparent;border:1px solid var(--accent);color:var(--accent);padding:10px 20px;border-radius:6px;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none">Request Quote</a></div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-visual"><img src="./images/iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed.webp" alt="8x16 shed" loading="lazy" /></div>
-        <div class="product-body">
-          <div class="product-name">8 Ã— 16 Shed</div>
-          <div style="font-size:13px;color:var(--silver);margin-bottom:14px">128 sq.ft Â· Large workshop or full storage</div>
-          <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px"><span class="product-price">$2,599</span><span style="font-size:13px;color:var(--silver)">CAD</span></div>
-          <div class="hst-tag">â˜… No HST</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--border)"><span style="font-size:12px;color:var(--silver)">Stock: <strong style="color:var(--green)">10 units</strong></span><a href="#contact" style="background:transparent;border:1px solid var(--accent);color:var(--accent);padding:10px 20px;border-radius:6px;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none">Request Quote</a></div>
-        </div>
-      </article>
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenu" x-cloak x-transition @click.outside="mobileMenu = false" class="md:hidden border-t border-charcoal-200 bg-white px-4 pb-4 pt-2 space-y-1">
+      <a href="#products" @click="mobileMenu = false" class="block py-3 text-sm font-semibold text-charcoal-700 hover:text-forest-700">Products</a>
+      <a href="#gallery" @click="mobileMenu = false" class="block py-3 text-sm font-semibold text-charcoal-700 hover:text-forest-700">Gallery</a>
+      <a href="#contact" @click="mobileMenu = false" class="block py-3 text-sm font-semibold bg-forest-700 text-white text-center rounded-lg hover:bg-forest-800 min-h-[44px] flex items-center justify-center">Get a Quote</a>
     </div>
-  </div>
-</section>
-<section id="gallery" style="padding:100px 0;background:var(--panel);border-top:1px solid var(--border)">
-  <div class="container">
-    <p style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Real Installations Â· SE Ontario</p>
-    <h2 style="font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.05;text-transform:uppercase;letter-spacing:-1px">See Them Installed</h2>
-    <div style="width:60px;height:3px;background:var(--accent);margin:20px 0 32px"></div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px">
-      <div style="border-radius:12px;overflow:hidden;height:200px;"><img src="./images/1560707717767739899.jpg" alt="8x12 installed" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
-      <div style="border-radius:12px;overflow:hidden;height:200px;"><img src="./images/2774779806422322328.jpg" alt="8x8 backyard" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
-      <div style="border-radius:12px;overflow:hidden;Height:200px;"><img src="./images/6528987855675359124.jpg" alt="front view" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
-      <div style="border-radius:12px;overflow:hidden;height:200px;"><img src="./images/6239205916520442470.jpg" alt="interior frame" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
-      <div style="border-radius:12px;overflow:hidden;height:200px;"><img src="./images/6015062567384174186.jpg" alt="interior floor" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
-      <div style="border-radius:12px;overflow:hidden;height:200px;"><img src="./images/2281579007663317400.jpg" alt="interior walls" style="width:100%;height:100%;object-fit:cover" loading="lazy"/></div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="relative min-h-[100svh] flex items-center pt-16 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="./images/resin-shed-large-assembly-backyard-belleville-ontario.jpg" alt="Resin storage shed installed in a Belleville Ontario backyard" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/70 to-charcoal-950/50"></div>
     </div>
-  </div>
-</section>
-<section id="contact" style="padding:100px 0;">
-  <div class="container">
-    <p style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Get In Touch</p>
-    <h2 style="font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.05;text-transform:uppercase;letter-spacing:-1px;margin-bottom:32px">Request A Quote</h2>
-    <p style="font-size:15px;color:var(--silver);margin-bottom:24px">Email us directly at <a href="mailto:dbbshed.seo@gmail.com" style="color:var(--accent)">dbbshed.seo@gmail.com</a> for pricing, delivery quotes, or distributor inquiries.</p>
-  </div>
-</section>
-<footer>
-  <div class="container">
-    <div style="font-family:var(--font-display);font-size:20px;font-weight:900;text-transform:uppercase;margin-bottom:8px">Sheds For <span style="color:var(--accent)">Less</span></div>
-    <p style="font-size:12px;color:var(--silver)">Â© 2025 Sheds For Less. South Eastern Ontario, Canada.</p>
-  </div>
-</footer>
-</string></spanJson>
-</string></spanJson>
-<script>
-function toggleMenu(){}
-</yÑ½±•5•¹Ôø(ð½ÍÉ¥ÁÐø(ð½ÍÑÉ¥¹œøð½ÍÁ…¹)Í½¸ø(ñÍÉ¥ÁÐø)‘½Õµ•¹Ð¹…‘‘Ù•¹Ñ1¥ÍÑ•¹•È =5½¹Ñ•¹Ñ1½…‘•œ°™Õ¹Ñ¥½¸ ¤ì(€‘½Õµ•¹Ð¹ÅÕ•ÉåM•±•Ñ½É±° œ¹ÁÉ½‘ÕÐµ…Éœ¤¹™½É… ¡•°€ôøì(€€€•°¹ÍÑå±”¹Á½Í¥Ñ¥½¸€ô€É•±…Ñ¥Ù”œì(€ô¤ì)ô¤ì(ð½ÍÉ¥ÁÐø(ð½‰½‘äø(ð½¡Ñµ°
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full">
+      <p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-forest-400 mb-3 sm:mb-4">South Eastern Ontario &middot; Belleville</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-[0.95] tracking-tight text-white mb-4 sm:mb-6">
+        Built For<br>Canadian<br><span class="text-transparent" style="-webkit-text-stroke:2px rgba(255,255,255,0.4)">Winters.</span>
+      </h1>
+      <p class="text-sm sm:text-base text-charcoal-300 max-w-md mb-4 sm:mb-5 leading-relaxed">
+        Premium resin storage sheds engineered for Ontario's climate. Steel-reinforced frames, 90&nbsp;kg/m&sup2; snow-rated, local stock in Belleville.
+      </p>
+      <div class="inline-flex items-center gap-2 bg-forest-700/20 border border-forest-600/40 text-forest-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold mb-6 sm:mb-8">
+        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        NO HST &mdash; What you see is what you pay
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="#products" class="inline-flex items-center justify-center gap-2 bg-forest-700 text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[48px]">
+          View Sheds
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-colors min-h-[48px]">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 sm:py-20 lg:py-24 bg-charcoal-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Available Now &middot; No HST</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">Choose Your Size</h2>
+      <div class="w-12 h-1 bg-forest-700 mb-8 sm:mb-10"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+
+        <!-- 8x8 -->
+        <article class="bg-white rounded-2xl border border-charcoal-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 sm:h-52 overflow-hidden">
+            <img src="./images/resin-storage-shed-8x8-front-garden-south-ontario.webp" alt="8x8 resin storage shed front view in garden setting" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-4 sm:p-5">
+            <div class="inline-flex items-center gap-1.5 bg-forest-50 border border-forest-200 text-forest-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full mb-3">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              No HST
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">8 &times; 8 Shed</h3>
+            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">64 sq.ft &middot; Tools &amp; garden equipment</p>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-3xl sm:text-4xl font-black text-forest-700">$1,499</span>
+              <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
+              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
+              <a href="#contact" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8x12 (Best Value) -->
+        <article class="bg-white rounded-2xl border-2 border-forest-700 overflow-hidden shadow-md relative">
+          <div class="absolute top-3 right-3 z-10 bg-forest-700 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Best Value</div>
+          <div class="h-48 sm:h-52 overflow-hidden">
+            <img src="./images/resin-storage-shed-8x12-installed-belleville-ontario.jpg" alt="8x12 resin storage shed installed in Belleville Ontario backyard" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-4 sm:p-5">
+            <div class="inline-flex items-center gap-1.5 bg-forest-50 border border-forest-200 text-forest-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full mb-3">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              No HST
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">8 &times; 12 Shed</h3>
+            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">96 sq.ft &middot; Most popular &middot; Lawnmowers &amp; bikes</p>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-3xl sm:text-4xl font-black text-forest-700">$2,199</span>
+              <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
+              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">44 units</strong></span>
+              <a href="#contact" class="inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8x16 -->
+        <article class="bg-white rounded-2xl border border-charcoal-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 sm:h-52 overflow-hidden">
+            <img src="./images/resin-storage-shed-8x16-side-view-south-ontario.webp" alt="8x16 resin storage shed side view with ladder" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-4 sm:p-5">
+            <div class="inline-flex items-center gap-1.5 bg-forest-50 border border-forest-200 text-forest-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full mb-3">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              No HST
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">8 &times; 16 Shed</h3>
+            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">128 sq.ft &middot; Large workshop or full storage</p>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-3xl sm:text-4xl font-black text-forest-700">$2,599</span>
+              <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
+              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
+              <a href="#contact" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 sm:py-20 lg:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Real Installations &middot; SE Ontario</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">See Them Installed</h2>
+      <div class="w-12 h-1 bg-forest-700 mb-8 sm:mb-10"></div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-interior-floor-walls-south-ontario.jpg" alt="Resin shed interior showing floor and walls in South Eastern Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-8x8-installed-backyard-belleville.jpg" alt="8x8 resin shed installed in Belleville backyard with trees" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-front-view-residential-belleville-ontario.jpg" alt="Resin shed front view in residential Belleville Ontario neighbourhood" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-interior-steel-frame-belleville.jpg" alt="Resin shed interior steel-reinforced frame and roof in Belleville" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-interior-floor-doorway-south-ontario.jpg" alt="Resin shed interior floor view from doorway in South Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="./images/resin-shed-side-angle-installed-belleville-ontario.jpg" alt="Resin shed side angle view installed next to house in Belleville Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote CTA -->
+  <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-forest-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-400 mb-2">Get In Touch</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-4 sm:mb-6">Request A Quote</h2>
+      <p class="text-sm sm:text-base text-forest-200 max-w-lg mx-auto mb-6 sm:mb-8 leading-relaxed">
+        Email us directly for pricing, delivery quotes, or distributor inquiries. We serve Belleville, Trenton, Kingston, and all of South Eastern Ontario.
+      </p>
+      <a href="mailto:dbbshed.seo@gmail.com" class="inline-flex items-center justify-center gap-2 bg-white text-forest-900 px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-50 transition-colors min-h-[48px]">
+        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        dbbshed.seo@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal-950 text-charcoal-400 py-8 sm:py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-2">
+        Sheds For <span class="text-forest-500">Less</span>
+      </p>
+      <p class="text-xs">&copy; 2025 Sheds For Less. South Eastern Ontario, Canada.</p>
+    </div>
+  </footer>
+
+<!--
+  ============================================================
+  IMAGE RENAME MANIFEST (old filename â†’ new filename)
+  ============================================================
+  8446656090803956552.jpg                              â†’ resin-shed-large-assembly-backyard-belleville-ontario.jpg
+  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed__1_.webp â†’ resin-storage-shed-8x8-front-garden-south-ontario.webp
+  1990715268089103201.jpg                              â†’ resin-storage-shed-8x12-installed-belleville-ontario.jpg
+  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed.webp    â†’ resin-storage-shed-8x16-side-view-south-ontario.webp
+  1560707717767739899.jpg                              â†’ resin-shed-interior-floor-walls-south-ontario.jpg
+  2774779806422322328.jpg                              â†’ resin-shed-8x8-installed-backyard-belleville.jpg
+  6528987855675359124.jpg                              â†’ resin-shed-front-view-residential-belleville-ontario.jpg
+  6239205916520442470.jpg                              â†’ resin-shed-interior-steel-frame-belleville.jpg
+  6015062567384174186.jpg                              â†’ resin-shed-interior-floor-doorway-south-ontario.jpg
+  2281579007663317400.jpg                              â†’ resin-shed-side-angle-installed-belleville-ontario.jpg
+  2666159302804891070.jpg                              â†’ resin-shed-steel-roof-frame-interior-ontario.jpg
+  PXL_20240409_135550667.jpg                           â†’ resin-shed-showroom-display-south-ontario.jpg
+  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed__2_.webp â†’ resin-storage-shed-doors-open-product-view.webp
+  ============================================================
+-->
+
+</body>
+</html>
