@@ -174,7 +174,7 @@
             </div>
             <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
               <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
-              <a href="#contact" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+              <a href="#contact" @click="$dispatch('select-shed', '8x8')" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -228,7 +228,7 @@
             </div>
             <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
               <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">44 units</strong></span>
-              <a href="#contact" class="inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
+              <a href="#contact" @click="$dispatch('select-shed', '8x12')" class="inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -277,7 +277,7 @@
             </div>
             <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
               <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
-              <a href="#contact" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+              <a href="#contact" @click="$dispatch('select-shed', '8x16')" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -325,16 +325,144 @@
 
   <!-- Contact / Quote CTA -->
   <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-forest-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-      <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-400 mb-2">Get In Touch</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-4 sm:mb-6">Request A Quote</h2>
-      <p class="text-sm sm:text-base text-forest-200 max-w-lg mx-auto mb-6 sm:mb-8 leading-relaxed">
-        Email us directly for pricing, delivery quotes, or distributor inquiries. We serve Belleville, Trenton, Kingston, and all of South Eastern Ontario.
+    <div class="max-w-2xl mx-auto px-4 sm:px-6"
+         @select-shed.window="shed = $event.detail"
+         x-data="{
+           name: '',
+           email: '',
+           phone: '',
+           shed: '',
+           delivery: false,
+           installation: false,
+           address: '',
+           message: '',
+           submitted: false,
+           get mailtoLink() {
+             let subject = 'Quote Request';
+             if (this.shed) subject += ' — ' + this.shed + ' Shed';
+             let body = 'Name: ' + this.name + '\n';
+             if (this.email) body += 'Email: ' + this.email + '\n';
+             if (this.phone) body += 'Phone: ' + this.phone + '\n';
+             body += '\nShed Size: ' + (this.shed || 'Not sure yet') + '\n';
+             body += 'Delivery: ' + (this.delivery ? 'Yes' : 'No') + '\n';
+             body += 'Installation: ' + (this.installation ? 'Yes' : 'No') + '\n';
+             if ((this.delivery || this.installation) && this.address) body += 'Location: ' + this.address + '\n';
+             if (this.message) body += '\nAdditional Notes:\n' + this.message + '\n';
+             return 'mailto:shedsforless@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+           }
+         }">
+      <div class="text-center mb-8 sm:mb-10">
+        <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-400 mb-2">Get In Touch</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-4 sm:mb-6">Request A Quote</h2>
+        <p class="text-sm sm:text-base text-forest-200 max-w-lg mx-auto leading-relaxed">
+          Fill out the form below and we'll get back to you with pricing. We serve Belleville, Trenton, Kingston, and all of South Eastern Ontario.
+        </p>
+      </div>
+
+      <!-- Quote Request Form -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 text-charcoal-900">
+
+        <!-- Name -->
+        <div class="mb-5">
+          <label for="quote-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Name <span class="text-red-500">*</span></label>
+          <input x-model="name" type="text" id="quote-name" required placeholder="Your full name"
+                 class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors" />
+        </div>
+
+        <!-- Email & Phone -->
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="quote-email" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Email</label>
+            <input x-model="email" type="email" id="quote-email" placeholder="you@example.com"
+                   class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors" />
+          </div>
+          <div>
+            <label for="quote-phone" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Phone</label>
+            <input x-model="phone" type="tel" id="quote-phone" placeholder="(613) 555-0123"
+                   class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors" />
+          </div>
+        </div>
+
+        <!-- Shed Size Selection -->
+        <div class="mb-5">
+          <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-3">Which shed size? <span class="text-red-500">*</span></label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <label :class="shed === '8x8' ? 'border-forest-600 bg-forest-50 ring-2 ring-forest-500' : 'border-charcoal-200 hover:border-charcoal-300'"
+                   class="relative flex flex-col items-center gap-1 border-2 rounded-xl p-4 cursor-pointer transition-colors text-center">
+              <input type="radio" x-model="shed" value="8x8" class="sr-only" />
+              <span class="text-2xl font-black uppercase tracking-tight">8 &times; 8</span>
+              <span class="text-xs text-charcoal-500">64 sq.ft</span>
+              <span class="text-sm font-bold text-forest-700">$1,250</span>
+            </label>
+            <label :class="shed === '8x12' ? 'border-forest-600 bg-forest-50 ring-2 ring-forest-500' : 'border-charcoal-200 hover:border-charcoal-300'"
+                   class="relative flex flex-col items-center gap-1 border-2 rounded-xl p-4 cursor-pointer transition-colors text-center">
+              <input type="radio" x-model="shed" value="8x12" class="sr-only" />
+              <span class="absolute -top-2.5 bg-forest-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">Best Value</span>
+              <span class="text-2xl font-black uppercase tracking-tight">8 &times; 12</span>
+              <span class="text-xs text-charcoal-500">96 sq.ft</span>
+              <span class="text-sm font-bold text-forest-700">$1,650</span>
+            </label>
+            <label :class="shed === '8x16' ? 'border-forest-600 bg-forest-50 ring-2 ring-forest-500' : 'border-charcoal-200 hover:border-charcoal-300'"
+                   class="relative flex flex-col items-center gap-1 border-2 rounded-xl p-4 cursor-pointer transition-colors text-center">
+              <input type="radio" x-model="shed" value="8x16" class="sr-only" />
+              <span class="text-2xl font-black uppercase tracking-tight">8 &times; 16</span>
+              <span class="text-xs text-charcoal-500">128 sq.ft</span>
+              <span class="text-sm font-bold text-forest-700">$1,975</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Services Checkboxes -->
+        <div class="mb-5">
+          <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-3">Services needed</label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <label :class="delivery ? 'border-forest-600 bg-forest-50' : 'border-charcoal-200 hover:border-charcoal-300'"
+                   class="flex items-center gap-3 border-2 rounded-xl px-4 py-3.5 cursor-pointer transition-colors flex-1">
+              <input type="checkbox" x-model="delivery" class="w-5 h-5 rounded border-charcoal-300 text-forest-600 focus:ring-forest-500" />
+              <div>
+                <span class="text-sm font-bold">Delivery</span>
+                <p class="text-xs text-charcoal-500">We deliver across SE Ontario</p>
+              </div>
+            </label>
+            <label :class="installation ? 'border-forest-600 bg-forest-50' : 'border-charcoal-200 hover:border-charcoal-300'"
+                   class="flex items-center gap-3 border-2 rounded-xl px-4 py-3.5 cursor-pointer transition-colors flex-1">
+              <input type="checkbox" x-model="installation" class="w-5 h-5 rounded border-charcoal-300 text-forest-600 focus:ring-forest-500" />
+              <div>
+                <span class="text-sm font-bold">Installation</span>
+                <p class="text-xs text-charcoal-500">Professional assembly on-site</p>
+              </div>
+            </label>
+          </div>
+
+          <!-- Location (shown when delivery or installation is selected) -->
+          <div x-show="delivery || installation" x-cloak x-transition class="mt-3">
+            <label for="quote-address" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Delivery / Installation location <span class="text-red-500">*</span></label>
+            <input x-model="address" type="text" id="quote-address" placeholder="City or address (e.g. Belleville, Trenton, Kingston)"
+                   class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors" />
+          </div>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="mb-6">
+          <label for="quote-message" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Additional notes <span class="text-charcoal-400 font-normal normal-case">(optional)</span></label>
+          <textarea x-model="message" id="quote-message" rows="3" placeholder="Anything else we should know? Timeline, site conditions, questions..."
+                    class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors resize-y"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <a :href="mailtoLink"
+           @click="if (!name || !shed) { $event.preventDefault(); alert('Please enter your name and select a shed size.'); } else if ((delivery || installation) && !address) { $event.preventDefault(); alert('Please enter your delivery/installation location.'); }"
+           class="w-full inline-flex items-center justify-center gap-2 bg-forest-700 text-white px-6 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-800 transition-colors min-h-[48px]">
+          <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Send Quote Request
+        </a>
+        <p class="text-xs text-charcoal-400 text-center mt-3">Opens your email app with your selections pre-filled.</p>
+      </div>
+
+      <!-- Direct email fallback -->
+      <p class="text-xs text-forest-300 text-center mt-6">
+        Prefer to email directly? <a href="mailto:shedsforless@gmail.com" class="underline hover:text-white">shedsforless@gmail.com</a>
       </p>
-      <a href="mailto:shedsforless@gmail.com" class="inline-flex items-center justify-center gap-2 bg-white text-forest-900 px-6 py-3.5 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-50 transition-colors min-h-[48px]">
-        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        shedsforless@gmail.com
-      </a>
     </div>
   </section>
 
