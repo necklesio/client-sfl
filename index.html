@@ -58,6 +58,95 @@
     html { scroll-behavior: smooth; }
     [x-cloak] { display: none !important; }
   </style>
+
+  <!-- Structured Data — Google Shopping / Merchant -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "DiBiBi 8x8 Resin Storage Shed",
+      "description": "64 sq.ft premium resin & galvanized steel storage shed. IPX3 waterproof, UV resistant, 90 kg/m² snow-rated roof, 100 km/h wind resistance. Steel-reinforced frame, double doors with padlockable deadbolt, 3 windows, skylight, reinforced resin flooring. DIY assembly with anchoring kit included.",
+      "image": "https://shedsforless.ca/images/resin-storage-shed-8x8-front-garden-south-ontario.webp",
+      "brand": { "@type": "Brand", "name": "DiBiBi" },
+      "sku": "SFL-8x8",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shedsforless.ca/#products",
+        "priceCurrency": "CAD",
+        "price": "1250.00",
+        "priceValidUntil": "2026-06-30",
+        "availability": "https://schema.org/PreOrder",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@type": "Organization", "name": "Sheds For Less" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CA", "addressRegion": "ON" }
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "DiBiBi 8x12 Resin Storage Shed",
+      "description": "96 sq.ft premium resin & galvanized steel storage shed. IPX3 waterproof, UV resistant, 90 kg/m² snow-rated roof, 100 km/h wind resistance. Steel-reinforced frame, double doors with padlockable deadbolt, 4 windows, skylight, reinforced resin flooring. DIY assembly with anchoring kit included.",
+      "image": "https://shedsforless.ca/images/resin-storage-shed-8x12-installed-belleville-ontario.jpg",
+      "brand": { "@type": "Brand", "name": "DiBiBi" },
+      "sku": "SFL-8x12",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shedsforless.ca/#products",
+        "priceCurrency": "CAD",
+        "price": "1650.00",
+        "priceValidUntil": "2026-06-30",
+        "availability": "https://schema.org/PreOrder",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@type": "Organization", "name": "Sheds For Less" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CA", "addressRegion": "ON" }
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "DiBiBi 8x16 Resin Storage Shed",
+      "description": "128 sq.ft premium resin & galvanized steel storage shed. IPX3 waterproof, UV resistant, 90 kg/m² snow-rated roof, 100 km/h wind resistance. Steel-reinforced frame, double doors with padlockable deadbolt, 4 windows, skylight, reinforced resin flooring. DIY assembly with anchoring kit included.",
+      "image": "https://shedsforless.ca/images/resin-storage-shed-8x16-side-view-south-ontario.webp",
+      "brand": { "@type": "Brand", "name": "DiBiBi" },
+      "sku": "SFL-8x16",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shedsforless.ca/#products",
+        "priceCurrency": "CAD",
+        "price": "1975.00",
+        "priceValidUntil": "2026-06-30",
+        "availability": "https://schema.org/PreOrder",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@type": "Organization", "name": "Sheds For Less" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CA", "addressRegion": "ON" }
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sheds For Less",
+      "description": "Premium resin storage sheds in South Eastern Ontario. No HST.",
+      "url": "https://shedsforless.ca",
+      "email": "shedsforless@gmail.com",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 44.1628, "longitude": -77.3832 },
+        "geoRadius": "100000"
+      },
+      "address": { "@type": "PostalAddress", "addressLocality": "Belleville", "addressRegion": "ON", "addressCountry": "CA" }
+    }
+  ]
+  </script>
 </head>
 <body class="bg-white text-charcoal-900 font-sans antialiased" x-data="{ mobileMenu: false, lightbox: null }">
 
@@ -123,7 +212,8 @@
       <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Available Late April &middot; No HST</p>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">Choose Your Size</h2>
       <div class="w-12 h-1 bg-forest-700 mb-3"></div>
-      <p class="text-sm text-charcoal-600 mb-8 sm:mb-10">Pre-book now and <strong class="text-forest-700">save 10%</strong>. Quantities are limited. Delivery &amp; installation available for an extra fee.</p>
+      <p class="text-sm text-charcoal-600 mb-4 sm:mb-5">Pre-book now and <strong class="text-forest-700">save 10%</strong>. Quantities are limited. Delivery &amp; installation available for an extra fee.</p>
+      <p class="text-sm text-charcoal-600 mb-8 sm:mb-10 max-w-3xl">Premium DiBiBi resin &amp; galvanized steel storage sheds engineered for Canadian winters. Every size features IPX3 waterproofing, UV-resistant panels that never rust or rot, steel-reinforced framing rated for 100&nbsp;km/h winds, and a 90&nbsp;kg/m&sup2; snow-load roof. Double-door entry with padlockable deadbolt, windows, skylights, and reinforced resin flooring come standard. DIY-friendly assembly with anchoring kit included.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
 
         <!-- 8x8 -->
@@ -172,9 +262,8 @@
                 Watch assembly video
               </a>
             </div>
-            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
-              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
-              <a href="#contact" @click="$dispatch('select-shed', '8x8')" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+            <div class="pt-3 border-t border-charcoal-100">
+              <a href="#contact" @click="$dispatch('select-shed', '8x8')" class="w-full inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -226,9 +315,8 @@
                 Watch assembly video
               </a>
             </div>
-            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
-              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">44 units</strong></span>
-              <a href="#contact" @click="$dispatch('select-shed', '8x12')" class="inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
+            <div class="pt-3 border-t border-charcoal-100">
+              <a href="#contact" @click="$dispatch('select-shed', '8x12')" class="w-full inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -275,9 +363,8 @@
                 <li>DIY assembly, anchoring kit included</li>
               </ul>
             </div>
-            <div class="flex items-center justify-between pt-3 border-t border-charcoal-100">
-              <span class="text-xs text-charcoal-500">Stock: <strong class="text-forest-700">10 units</strong></span>
-              <a href="#contact" @click="$dispatch('select-shed', '8x16')" class="inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
+            <div class="pt-3 border-t border-charcoal-100">
+              <a href="#contact" @click="$dispatch('select-shed', '8x16')" class="w-full inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
         </article>
@@ -336,6 +423,7 @@
            installation: false,
            address: '',
            message: '',
+           honeypot: '',
            submitted: false,
            get mailtoLink() {
              let subject = 'Quote Request';
@@ -361,6 +449,12 @@
 
       <!-- Quote Request Form -->
       <div class="bg-white rounded-2xl p-6 sm:p-8 text-charcoal-900">
+
+        <!-- Honeypot — hidden from humans, bots fill it in -->
+        <div class="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true">
+          <label for="quote-website">Website</label>
+          <input x-model="honeypot" type="text" id="quote-website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
 
         <!-- Name -->
         <div class="mb-5">
@@ -451,7 +545,7 @@
 
         <!-- Submit -->
         <a :href="mailtoLink"
-           @click="if (!name || !shed) { $event.preventDefault(); alert('Please enter your name and select a shed size.'); } else if ((delivery || installation) && !address) { $event.preventDefault(); alert('Please enter your delivery/installation location.'); }"
+           @click="if (honeypot) { $event.preventDefault(); return; } if (!name || !shed) { $event.preventDefault(); alert('Please enter your name and select a shed size.'); } else if ((delivery || installation) && !address) { $event.preventDefault(); alert('Please enter your delivery/installation location.'); }"
            class="w-full inline-flex items-center justify-center gap-2 bg-forest-700 text-white px-6 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-800 transition-colors min-h-[48px]">
           <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           Send Quote Request
