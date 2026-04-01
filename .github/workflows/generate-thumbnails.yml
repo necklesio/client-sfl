@@ -1,0 +1,41 @@
+name: Generate Gallery Thumbnails
+on:
+  push:
+    paths:
+      - 'images/*.jpg' # Triggers when you add new full-size images
+
+jobs:
+  resize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Sharp
+        run: npm install sharp-cli -g
+
+      - name: Create Thumbnails Folder
+        run: mkdir -p images/thumbnails
+
+      - name: Resize Images to 800px
+        # This takes all JPGs and creates smooth 800px wide versions
+        run: |
+          for file in images/*.jpg; do
+            filename=$(basename "$file")
+            sharp -i "$file" -o "images/thumbnails/${filename%.*}-thumb.jpg" resize 800
+          done
+
+      - name: Commit Thumbnails
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add images/thumbnails/
+          git commit -m "Auto-generated gallery thumbnails" || echo "No changes to commit"
+          git push
