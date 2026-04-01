@@ -1,9 +1,8 @@
-name: Generate Gallery Thumbnails
 on:
   push:
     paths:
-      - 'images/*.jpg' # Triggers when you add new full-size images
-
+      - 'images/*.jpg'
+  workflow_dispatch: # <--- Add this line
 jobs:
   resize:
     runs-on: ubuntu-latest
