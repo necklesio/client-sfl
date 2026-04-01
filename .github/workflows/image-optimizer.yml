@@ -1,0 +1,26 @@
+name: Optimize Images
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'images/**' # Only runs when files in your image folder change
+
+jobs:
+  build:
+    name: Image Optimizer
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allows the action to save the optimized images back to your repo
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Compress Images
+        uses: stellasoftio/image-optimizer-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Set quality to 80 to balance sharpness and file size
+          jpeg-quality: 80 
+          # This helps remove the "grainy" metadata artifacts
+          compress-jpg: true
