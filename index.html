@@ -200,7 +200,7 @@
     </div>
   </section>
 
- <section id="products" class="py-16 sm:py-20 lg:py-24 bg-charcoal-50">
+  <section id="products" class="py-16 sm:py-20 lg:py-24 bg-charcoal-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Available Late April &middot; No HST</p>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">Choose Your Size</h2>
@@ -211,7 +211,7 @@
 
         <article class="bg-white rounded-2xl border border-charcoal-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow" x-data="{ open: false }">
           <div class="h-48 sm:h-52 overflow-hidden">
-            <img src="./images/thumbnails/resin-storage-shed-8x8-front-garden-south-ontario-thumb.jpg" alt="8x8 resin storage shed front view in garden setting" class="w-full h-full object-cover" loading="lazy" />
+            <img src="./images/thumbnails/resin-storage-shed-8x8-front-garden-south-ontario-thumb.webp" alt="8x8 resin storage shed front view in garden setting" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-4 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
@@ -233,12 +233,26 @@
               <span x-text="open ? 'Hide specs' : 'View specs &amp; details'"></span>
             </button>
             <div x-show="open" x-cloak x-transition class="text-xs text-charcoal-600 space-y-2 mb-4 border-t border-charcoal-100 pt-3">
-              <p class="font-semibold text-charcoal-800">DiBiBi Resin & Steel Construction</p>
+              <p class="font-semibold text-charcoal-800">DiBiBi Resin &amp; Steel Construction</p>
               <ul class="space-y-1 list-disc list-inside">
-                <li>Exterior: 240 × 246 × 241 cm</li>
+                <li>Exterior: 240 &times; 246 &times; 241 cm (7'11" &times; 8'1" &times; 7'11")</li>
+                <li>Interior height: 235 cm (7'8")</li>
+                <li>3 windows, 2 air outlets, skylight</li>
+                <li>Double doors: 130 cm W &times; 178 cm H</li>
+                <li>Padlockable deadbolt (powder coated)</li>
                 <li>Weight: 124 kg (274 lbs)</li>
-                <li>Wind/Snow Rated for Ontario</li>
+                <li>Wind resistance: Level 10 (100 km/h)</li>
+                <li>Snow load: 90 kg/m&sup2;</li>
+                <li>IPX3 waterproof, UV resistant, no rust</li>
+                <li>Galvanized steel frame + resin panels</li>
+                <li>Reinforced resin flooring</li>
+                <li>Stainless steel hardware throughout</li>
+                <li>DIY assembly, anchoring kit included</li>
               </ul>
+              <a href="https://www.youtube.com/watch?v=g7go1OsUtiE" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-forest-700 font-semibold hover:underline mt-1">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch assembly video
+              </a>
             </div>
             <div class="pt-3 border-t border-charcoal-100">
               <a href="#contact" @click="$dispatch('select-shed', '8x8')" class="w-full inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
@@ -260,10 +274,37 @@
               <span class="inline-flex items-center bg-red-50 border border-red-200 text-red-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">Save 25%</span>
             </div>
             <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">8 &times; 12 Shed</h3>
-            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">96 sq.ft &middot; Most popular</p>
+            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">96 sq.ft &middot; Most popular &middot; Lawnmowers &amp; bikes</p>
             <div class="flex items-baseline gap-2 mb-4">
               <span class="text-3xl sm:text-4xl font-black text-forest-700">$1,650</span>
               <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
+            </div>
+            <p class="text-xs text-charcoal-400 line-through mb-4">Was $2,199</p>
+            <button @click="open = !open" class="flex items-center gap-1 text-xs font-semibold text-forest-700 hover:text-forest-800 mb-3 min-h-[44px]">
+              <svg :class="open ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span x-text="open ? 'Hide specs' : 'View specs &amp; details'"></span>
+            </button>
+            <div x-show="open" x-cloak x-transition class="text-xs text-charcoal-600 space-y-2 mb-4 border-t border-charcoal-100 pt-3">
+              <p class="font-semibold text-charcoal-800">DiBiBi Resin &amp; Steel Construction</p>
+              <ul class="space-y-1 list-disc list-inside">
+                <li>Exterior: 240 &times; 368 &times; 241 cm (7'11" &times; 12'1" &times; 7'11")</li>
+                <li>Interior height: 235 cm (7'8")</li>
+                <li>4 windows, 2 air outlets, skylight</li>
+                <li>Double doors: 130 cm W &times; 178 cm H</li>
+                <li>Padlockable deadbolt (powder coated)</li>
+                <li>Weight: 167 kg (369 lbs)</li>
+                <li>Wind resistance: Level 10 (100 km/h)</li>
+                <li>Snow load: 90 kg/m&sup2;</li>
+                <li>IPX3 waterproof, UV resistant, no rust</li>
+                <li>Galvanized steel frame + resin panels</li>
+                <li>Reinforced resin flooring</li>
+                <li>Stainless steel hardware throughout</li>
+                <li>DIY assembly, anchoring kit included</li>
+              </ul>
+              <a href="https://www.youtube.com/watch?v=pgeDyFj39zo" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-forest-700 font-semibold hover:underline mt-1">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch assembly video
+              </a>
             </div>
             <div class="pt-3 border-t border-charcoal-100">
               <a href="#contact" @click="$dispatch('select-shed', '8x12')" class="w-full inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
@@ -273,7 +314,7 @@
 
         <article class="bg-white rounded-2xl border border-charcoal-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow" x-data="{ open: false }">
           <div class="h-48 sm:h-52 overflow-hidden">
-            <img src="./images/thumbnails/resin-storage-shed-8x16-side-view-south-ontario-thumb.jpg" alt="8x16 resin storage shed side view with ladder" class="w-full h-full object-cover" loading="lazy" />
+            <img src="./images/thumbnails/resin-storage-shed-8x16-side-view-south-ontario-thumb.webp" alt="8x16 resin storage shed side view with ladder" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-4 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
@@ -290,6 +331,28 @@
               <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
             </div>
             <p class="text-xs text-charcoal-400 line-through mb-4">Was $2,599</p>
+            <button @click="open = !open" class="flex items-center gap-1 text-xs font-semibold text-forest-700 hover:text-forest-800 mb-3 min-h-[44px]">
+              <svg :class="open ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <span x-text="open ? 'Hide specs' : 'View specs &amp; details'"></span>
+            </button>
+            <div x-show="open" x-cloak x-transition class="text-xs text-charcoal-600 space-y-2 mb-4 border-t border-charcoal-100 pt-3">
+              <p class="font-semibold text-charcoal-800">DiBiBi Resin &amp; Steel Construction</p>
+              <ul class="space-y-1 list-disc list-inside">
+                <li>Exterior: 240 &times; 489 &times; 241 cm (7'11" &times; 16'1" &times; 7'11")</li>
+                <li>Interior height: 235 cm (7'8")</li>
+                <li>4 windows, 2 air outlets, skylight</li>
+                <li>Double doors: 130 cm W &times; 178 cm H</li>
+                <li>Padlockable deadbolt (powder coated)</li>
+                <li>Weight: 215 kg (474 lbs)</li>
+                <li>Wind resistance: Level 10 (100 km/h)</li>
+                <li>Snow load: 90 kg/m&sup2;</li>
+                <li>IPX3 waterproof, UV resistant, no rust</li>
+                <li>Galvanized steel frame + resin panels</li>
+                <li>Reinforced resin flooring</li>
+                <li>Stainless steel hardware throughout</li>
+                <li>DIY assembly, anchoring kit included</li>
+              </ul>
+            </div>
             <div class="pt-3 border-t border-charcoal-100">
               <a href="#contact" @click="$dispatch('select-shed', '8x16')" class="w-full inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
@@ -307,49 +370,24 @@
       <div class="w-12 h-1 bg-forest-700 mb-3"></div>
       <p class="text-sm text-charcoal-600 mb-8 sm:mb-10">Pre-book now and <strong class="text-forest-700">save 10%</strong>. Quantities are limited. Delivery &amp; installation available for an extra fee.</p>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
-        
         <button @click="lightbox = './images/resin-shed-interior-floor-walls-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-interior-floor-walls-south-ontario-thumb.jpg" 
-               alt="Resin shed interior showing floor and walls in South Eastern Ontario" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-interior-floor-walls-south-ontario-thumb.jpg" alt="Resin shed interior showing floor and walls in South Eastern Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-        
         <button @click="lightbox = './images/resin-shed-8x8-installed-backyard-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-8x8-installed-backyard-belleville-thumb.jpg" 
-               alt="8x8 resin shed installed in Belleville backyard with trees" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-8x8-installed-backyard-belleville-thumb.jpg" alt="8x8 resin shed installed in Belleville backyard with trees" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-        
         <button @click="lightbox = './images/resin-shed-front-view-residential-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-front-view-residential-belleville-ontario-thumb.jpg" 
-               alt="Resin shed front view in residential Belleville Ontario neighbourhood" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-front-view-residential-belleville-ontario-thumb.jpg" alt="Resin shed front view in residential Belleville Ontario neighbourhood" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-        
         <button @click="lightbox = './images/resin-shed-interior-steel-frame-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-interior-steel-frame-belleville-thumb.jpg" 
-               alt="Resin shed interior steel-reinforced frame and roof in Belleville" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-interior-steel-frame-belleville-thumb.jpg" alt="Resin shed interior steel-reinforced frame and roof in Belleville" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-        
         <button @click="lightbox = './images/resin-shed-interior-floor-doorway-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-interior-floor-doorway-south-ontario-thumb.jpg" 
-               alt="Resin shed interior floor view from doorway in South Ontario" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-interior-floor-doorway-south-ontario-thumb.jpg" alt="Resin shed interior floor view from doorway in South Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-        
         <button @click="lightbox = './images/resin-shed-side-angle-installed-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-          <img src="./images/thumbnails/resin-shed-side-angle-installed-belleville-ontario-thumb.jpg" 
-               alt="Resin shed side angle view installed next to house in Belleville Ontario" 
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-               loading="lazy" />
+          <img src="./images/thumbnails/resin-shed-side-angle-installed-belleville-ontario-thumb.jpg" alt="Resin shed side angle view installed next to house in Belleville Ontario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </button>
-
       </div>
     </div>
   </section>
