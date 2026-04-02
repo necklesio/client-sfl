@@ -59,7 +59,6 @@
     [x-cloak] { display: none !important; }
   </style>
 
-  <!-- Structured Data — Google Shopping / Merchant -->
   <script type="application/ld+json">
   [
     {
@@ -150,25 +149,21 @@
 </head>
 <body class="bg-white text-charcoal-900 font-sans antialiased" x-data="{ mobileMenu: false, lightbox: null }">
 
-  <!-- Sticky Nav -->
   <nav class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-charcoal-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="#hero" class="text-xl sm:text-2xl font-black tracking-tight uppercase">
         Sheds For <span class="text-forest-700">Less</span>
       </a>
-      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-charcoal-600">
         <a href="#products" class="hover:text-forest-700 transition-colors">Products</a>
         <a href="#gallery" class="hover:text-forest-700 transition-colors">Gallery</a>
         <a href="#contact" class="inline-flex items-center gap-2 bg-forest-700 text-white px-5 py-2.5 rounded-lg hover:bg-forest-800 transition-colors">Get a Quote</a>
       </div>
-      <!-- Mobile Hamburger -->
       <button @click="mobileMenu = !mobileMenu" class="md:hidden p-2 -mr-2 text-charcoal-700" aria-label="Toggle menu">
         <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg x-show="mobileMenu" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <!-- Mobile Menu -->
     <div x-show="mobileMenu" x-cloak x-transition @click.outside="mobileMenu = false" class="md:hidden border-t border-charcoal-200 bg-white px-4 pb-4 pt-2 space-y-1">
       <a href="#products" @click="mobileMenu = false" class="block py-3 text-sm font-semibold text-charcoal-700 hover:text-forest-700">Products</a>
       <a href="#gallery" @click="mobileMenu = false" class="block py-3 text-sm font-semibold text-charcoal-700 hover:text-forest-700">Gallery</a>
@@ -176,7 +171,6 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section id="hero" class="relative min-h-[100svh] flex items-center pt-16 overflow-hidden">
     <div class="absolute inset-0">
       <img src="./images/resin-shed-large-assembly-backyard-belleville-ontario.jpg" alt="Resin storage shed installed in a Belleville Ontario backyard" class="w-full h-full object-cover object-center" />
@@ -269,6 +263,7 @@
             <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">96 sq.ft &middot; Most popular</p>
             <div class="flex items-baseline gap-2 mb-4">
               <span class="text-3xl sm:text-4xl font-black text-forest-700">$1,650</span>
+              <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
             </div>
             <div class="pt-3 border-t border-charcoal-100">
               <a href="#contact" @click="$dispatch('select-shed', '8x12')" class="w-full inline-flex items-center justify-center bg-forest-700 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-800 transition-colors min-h-[44px]">Request Quote</a>
@@ -283,72 +278,89 @@
           <div class="p-4 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
               <span class="inline-flex items-center gap-1.5 bg-forest-50 border border-forest-200 text-forest-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010
-
-        <section id="gallery" class="py-16 sm:py-20 lg:py-24 bg-white">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Real Installations &middot; SE Ontario</p>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">See Them Installed</h2>
-            <div class="w-12 h-1 bg-forest-700 mb-3"></div>
-            <p class="text-sm text-charcoal-600 mb-8 sm:mb-10">Pre-book now and <strong class="text-forest-700">save 10%</strong>. Quantities are limited. Delivery &amp; installation available for an extra fee.</p>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
-              
-              <button @click="lightbox = './images/resin-shed-interior-floor-walls-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-interior-floor-walls-south-ontario-thumb.jpg" 
-                     alt="Resin shed interior showing floor and walls in South Eastern Ontario" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-              
-              <button @click="lightbox = './images/resin-shed-8x8-installed-backyard-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-8x8-installed-backyard-belleville-thumb.jpg" 
-                     alt="8x8 resin shed installed in Belleville backyard with trees" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-              
-              <button @click="lightbox = './images/resin-shed-front-view-residential-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-front-view-residential-belleville-ontario-thumb.jpg" 
-                     alt="Resin shed front view in residential Belleville Ontario neighbourhood" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-              
-              <button @click="lightbox = './images/resin-shed-interior-steel-frame-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-interior-steel-frame-belleville-thumb.jpg" 
-                     alt="Resin shed interior steel-reinforced frame and roof in Belleville" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-              
-              <button @click="lightbox = './images/resin-shed-interior-floor-doorway-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-interior-floor-doorway-south-ontario-thumb.jpg" 
-                     alt="Resin shed interior floor view from doorway in South Ontario" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-              
-              <button @click="lightbox = './images/resin-shed-side-angle-installed-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
-                <img src="./images/thumbnails/resin-shed-side-angle-installed-belleville-ontario-thumb.jpg" 
-                     alt="Resin shed side angle view installed next to house in Belleville Ontario" 
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                     loading="lazy" />
-              </button>
-      
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                No HST
+              </span>
+              <span class="inline-flex items-center bg-red-50 border border-red-200 text-red-700 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">Save 24%</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">8 &times; 16 Shed</h3>
+            <p class="text-xs sm:text-sm text-charcoal-500 mt-1 mb-3">128 sq.ft &middot; Large workshop or full storage</p>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-3xl sm:text-4xl font-black text-forest-700">$1,975</span>
+              <span class="text-xs sm:text-sm text-charcoal-400 font-medium">CAD</span>
+            </div>
+            <p class="text-xs text-charcoal-400 line-through mb-4">Was $2,599</p>
+            <div class="pt-3 border-t border-charcoal-100">
+              <a href="#contact" @click="$dispatch('select-shed', '8x16')" class="w-full inline-flex items-center justify-center border-2 border-forest-700 text-forest-700 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-forest-700 hover:text-white transition-colors min-h-[44px]">Request Quote</a>
             </div>
           </div>
-      </section>
+        </article>
 
-
-      <!-- Lightbox Modal -->
-      <div x-show="lightbox" x-cloak x-transition.opacity @click="lightbox = null" @keydown.escape.window="lightbox = null" class="fixed inset-0 z-[100] bg-charcoal-950/90 flex items-center justify-center p-4 sm:p-8 cursor-zoom-out">
-        <button @click="lightbox = null" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <img :src="lightbox" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain" @click.stop />
       </div>
+    </div>
+  </section>
 
-  <!-- Contact / Quote CTA -->
+  <section id="gallery" class="py-16 sm:py-20 lg:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">Real Installations &middot; SE Ontario</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-3">See Them Installed</h2>
+      <div class="w-12 h-1 bg-forest-700 mb-3"></div>
+      <p class="text-sm text-charcoal-600 mb-8 sm:mb-10">Pre-book now and <strong class="text-forest-700">save 10%</strong>. Quantities are limited. Delivery &amp; installation available for an extra fee.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+        
+        <button @click="lightbox = './images/resin-shed-interior-floor-walls-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-interior-floor-walls-south-ontario-thumb.jpg" 
+               alt="Resin shed interior showing floor and walls in South Eastern Ontario" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+        
+        <button @click="lightbox = './images/resin-shed-8x8-installed-backyard-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-8x8-installed-backyard-belleville-thumb.jpg" 
+               alt="8x8 resin shed installed in Belleville backyard with trees" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+        
+        <button @click="lightbox = './images/resin-shed-front-view-residential-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-front-view-residential-belleville-ontario-thumb.jpg" 
+               alt="Resin shed front view in residential Belleville Ontario neighbourhood" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+        
+        <button @click="lightbox = './images/resin-shed-interior-steel-frame-belleville.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-interior-steel-frame-belleville-thumb.jpg" 
+               alt="Resin shed interior steel-reinforced frame and roof in Belleville" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+        
+        <button @click="lightbox = './images/resin-shed-interior-floor-doorway-south-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-interior-floor-doorway-south-ontario-thumb.jpg" 
+               alt="Resin shed interior floor view from doorway in South Ontario" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+        
+        <button @click="lightbox = './images/resin-shed-side-angle-installed-belleville-ontario.jpg'" class="rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in">
+          <img src="./images/thumbnails/resin-shed-side-angle-installed-belleville-ontario-thumb.jpg" 
+               alt="Resin shed side angle view installed next to house in Belleville Ontario" 
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+               loading="lazy" />
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <div x-show="lightbox" x-cloak x-transition.opacity @click="lightbox = null" @keydown.escape.window="lightbox = null" class="fixed inset-0 z-[100] bg-charcoal-950/90 flex items-center justify-center p-4 sm:p-8 cursor-zoom-out">
+    <button @click="lightbox = null" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img :src="lightbox" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain" @click.stop />
+  </div>
+
   <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-forest-900 text-white">
     <div class="max-w-2xl mx-auto px-4 sm:px-6"
          @select-shed.window="shed = $event.detail"
@@ -385,23 +397,19 @@
         </p>
       </div>
 
-      <!-- Quote Request Form -->
       <div class="bg-white rounded-2xl p-6 sm:p-8 text-charcoal-900">
 
-        <!-- Honeypot — hidden from humans, bots fill it in -->
         <div class="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true">
           <label for="quote-website">Website</label>
           <input x-model="honeypot" type="text" id="quote-website" name="website" tabindex="-1" autocomplete="off" />
         </div>
 
-        <!-- Name -->
         <div class="mb-5">
           <label for="quote-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Name <span class="text-red-500">*</span></label>
           <input x-model="name" type="text" id="quote-name" required placeholder="Your full name"
                  class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors" />
         </div>
 
-        <!-- Email & Phone -->
         <div class="grid sm:grid-cols-2 gap-5 mb-5">
           <div>
             <label for="quote-email" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Email</label>
@@ -415,7 +423,6 @@
           </div>
         </div>
 
-        <!-- Shed Size Selection -->
         <div class="mb-5">
           <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-3">Which shed size? <span class="text-red-500">*</span></label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -444,7 +451,6 @@
           </div>
         </div>
 
-        <!-- Services Checkboxes -->
         <div class="mb-5">
           <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-3">Services needed</label>
           <div class="flex flex-col sm:flex-row gap-3">
@@ -466,7 +472,6 @@
             </label>
           </div>
 
-          <!-- Location (shown when delivery or installation is selected) -->
           <div x-show="delivery || installation" x-cloak x-transition class="mt-3">
             <label for="quote-address" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Delivery / Installation location <span class="text-red-500">*</span></label>
             <input x-model="address" type="text" id="quote-address" placeholder="City or address (e.g. Belleville, Trenton, Kingston)"
@@ -474,14 +479,12 @@
           </div>
         </div>
 
-        <!-- Additional Notes -->
         <div class="mb-6">
           <label for="quote-message" class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-1.5">Additional notes <span class="text-charcoal-400 font-normal normal-case">(optional)</span></label>
           <textarea x-model="message" id="quote-message" rows="3" placeholder="Anything else we should know? Timeline, site conditions, questions..."
                     class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-forest-500 transition-colors resize-y"></textarea>
         </div>
 
-        <!-- Submit -->
         <a :href="mailtoLink"
            @click="if (honeypot) { $event.preventDefault(); return; } if (!name || !shed) { $event.preventDefault(); alert('Please enter your name and select a shed size.'); } else if ((delivery || installation) && !address) { $event.preventDefault(); alert('Please enter your delivery/installation location.'); }"
            class="w-full inline-flex items-center justify-center gap-2 bg-forest-700 text-white px-6 py-3.5 rounded-lg font-bold text-sm sm:text-base hover:bg-forest-800 transition-colors min-h-[48px]">
@@ -491,14 +494,12 @@
         <p class="text-xs text-charcoal-400 text-center mt-3">Opens your email app with your selections pre-filled.</p>
       </div>
 
-      <!-- Direct email fallback -->
       <p class="text-xs text-forest-300 text-center mt-6">
         Prefer to email directly? <a href="mailto:shedsforless@gmail.com" class="underline hover:text-white">shedsforless@gmail.com</a>
       </p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-charcoal-950 text-charcoal-400 py-8 sm:py-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
       <p class="text-lg sm:text-xl font-black uppercase tracking-tight text-white mb-2">
@@ -507,26 +508,6 @@
       <p class="text-xs">&copy; 2026 Sheds For Less. South Eastern Ontario, Canada.</p>
     </div>
   </footer>
-
-<!--
-  ============================================================
-  IMAGE RENAME MANIFEST (old filename → new filename)
-  ============================================================
-  8446656090803956552.jpg                              → resin-shed-large-assembly-backyard-belleville-ontario.jpg
-  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed__1_.webp → resin-storage-shed-8x8-front-garden-south-ontario.webp
-  1990715268089103201.jpg                              → resin-storage-shed-8x12-installed-belleville-ontario.jpg
-  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed.webp    → resin-storage-shed-8x16-side-view-south-ontario.webp
-  1560707717767739899.jpg                              → resin-shed-interior-floor-walls-south-ontario.jpg
-  2774779806422322328.jpg                              → resin-shed-8x8-installed-backyard-belleville.jpg
-  6528987855675359124.jpg                              → resin-shed-front-view-residential-belleville-ontario.jpg
-  6239205916520442470.jpg                              → resin-shed-interior-steel-frame-belleville.jpg
-  6015062567384174186.jpg                              → resin-shed-interior-floor-doorway-south-ontario.jpg
-  2281579007663317400.jpg                              → resin-shed-side-angle-installed-belleville-ontario.jpg
-  2666159302804891070.jpg                              → resin-shed-steel-roof-frame-interior-ontario.jpg
-  PXL_20240409_135550667.jpg                           → resin-shed-showroom-display-south-ontario.jpg
-  iYofe_8_ft__W_x_10_ft__D_Resin_Storage_Shed__2_.webp → resin-storage-shed-doors-open-product-view.webp
-  ============================================================
--->
 
 </body>
 </html>
