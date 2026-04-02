@@ -2,7 +2,9 @@ on:
   push:
     paths:
       - 'images/*.jpg'
-  workflow_dispatch: # <--- Add this line
+      - 'images/*.webp' # Track webp changes too
+  workflow_dispatch: 
+
 jobs:
   resize:
     runs-on: ubuntu-latest
@@ -24,10 +26,12 @@ jobs:
         run: mkdir -p images/thumbnails
 
       - name: Resize Images to 800px
-        # This takes all JPGs and creates smooth 800px wide versions
+        # This loop now finds both .jpg and .webp files
         run: |
-          for file in images/*.jpg; do
+          shopt -s nullglob
+          for file in images/*.{jpg,webp,JPG,WEBP}; do
             filename=$(basename "$file")
+            # This saves everything as a .jpg thumbnail for your HTML consistency
             sharp -i "$file" -o "images/thumbnails/${filename%.*}-thumb.jpg" resize 800
           done
 
@@ -36,5 +40,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add images/thumbnails/
-          git commit -m "Auto-generated gallery thumbnails" || echo "No changes to commit"
+          git commit -m "Auto-generated thumbnails for JPG and WebP" || echo "No changes to commit"
           git push
