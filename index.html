@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheds For Less | Premium Resin Storage Sheds – South Eastern Ontario</title>
-  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8x8 from $1,250, 8x12 from $1,650, 8x16 from $1,975 — snow-rated. Pre-book and save 10%. Contact shedsforless@gmail.com." />
+  <meta name="description" content="Sheds For Less sells premium weather-resistant resin storage sheds in South Eastern Ontario. 8x8 from $1,250, 8x12 from $1,650, 8x16 from $1,975 — snow-rated. Pre-book and save 10%. Contact info@shedsforless.ca." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://shedsforless.ca/" />
   <meta property="og:type" content="website" />
@@ -136,7 +136,7 @@
       "name": "Sheds For Less",
       "description": "Premium resin storage sheds in South Eastern Ontario.",
       "url": "https://shedsforless.ca",
-      "email": "shedsforless@gmail.com",
+      "email": "info@shedsforless.ca",
       "areaServed": {
         "@type": "GeoCircle",
         "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 44.1628, "longitude": -77.3832 },
@@ -384,6 +384,65 @@
     <img :src="lightbox" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain" @click.stop />
   </div>
 
+  <!-- Facebook Reviews -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-charcoal-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-14">
+        <p class="text-xs font-bold tracking-[0.25em] uppercase text-forest-700 mb-2">What Customers Say</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight mb-4">Facebook Reviews</h2>
+        <div class="flex items-center justify-center gap-2 mb-3">
+          <div class="flex text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <span class="text-sm font-semibold text-charcoal-700">4.5-star seller · 7 reviews</span>
+        </div>
+        <p class="text-sm text-charcoal-500">Verified Facebook Marketplace seller ratings</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Luke -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-charcoal-100 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center text-forest-700 font-bold text-sm flex-shrink-0">L</div>
+            <div>
+              <p class="text-sm font-bold text-charcoal-900">Luke</p>
+              <p class="text-xs text-charcoal-400">September 27, 2025</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 text-base -mt-1">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-xs text-forest-700 font-semibold">Notable: Punctuality &middot; Communication &middot; Pricing</p>
+          <p class="text-sm text-charcoal-700 leading-relaxed flex-1">Dave went above and beyond to put me in contact with his installer when I had difficulties with installation and was great with communication, pricing, and helping me get the shed done the way it should've been — also replaced a part he wasn't obligated to due to damage from his installation. Highly recommend Dave and his installer Louis for the great work! Shed came out great.</p>
+        </div>
+
+        <!-- Keith -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-charcoal-100 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center text-forest-700 font-bold text-sm flex-shrink-0">K</div>
+            <div>
+              <p class="text-sm font-bold text-charcoal-900">Keith</p>
+              <p class="text-xs text-charcoal-400">June 2, 2023</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 text-base -mt-1">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-xs text-forest-700 font-semibold">Notable: Punctuality &middot; Communication &middot; Pricing &middot; Item Description</p>
+          <p class="text-sm text-charcoal-700 leading-relaxed flex-1">Great transaction. A pleasure to deal with Dave. He went above and beyond ! AAA+++</p>
+        </div>
+
+        <!-- Kim -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-charcoal-100 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center text-forest-700 font-bold text-sm flex-shrink-0">K</div>
+            <div>
+              <p class="text-sm font-bold text-charcoal-900">Kim</p>
+              <p class="text-xs text-charcoal-400">August 27, 2025</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 text-base -mt-1">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-xs text-forest-700 font-semibold">Notable: Punctuality &middot; Communication &middot; Pricing &middot; Item Description</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-forest-900 text-white">
     <div class="max-w-2xl mx-auto px-4 sm:px-6"
          @select-shed.window="shed = $event.detail"
@@ -409,7 +468,7 @@
              body += 'Installation: ' + (this.installation ? 'Yes' : 'No') + '\n';
              if ((this.delivery || this.installation) && this.address) body += 'Location: ' + this.address + '\n';
              if (this.message) body += '\nAdditional Notes:\n' + this.message + '\n';
-             return 'mailto:shedsforless@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+             return 'mailto:info@shedsforless.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
            }
          }">
       <div class="text-center mb-8 sm:mb-10">
@@ -518,7 +577,7 @@
       </div>
 
       <p class="text-xs text-forest-300 text-center mt-6">
-        Prefer to email directly? <a href="mailto:shedsforless@gmail.com" class="underline hover:text-white">shedsforless@gmail.com</a>
+        Prefer to email directly? <a href="mailto:info@shedsforless.ca" class="underline hover:text-white">info@shedsforless.ca</a>
       </p>
     </div>
   </section>
